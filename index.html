@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Instituto Guidolin de Odontologia</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    nav { margin-bottom: 20px; }
+    nav button { margin-right: 8px; padding: 8px; }
+    section { display: none; }
+    section.active { display: block; }
+    .field { margin-bottom: 8px; }
+    .field label { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Instituto Guidolin de Odontologia LTDA</h1>
+  <nav>
+    <button onclick="show('info')">Informações</button>
+    <button onclick="show('contato')">Contato</button>
+    <button onclick="show('endereco')">Endereço</button>
+    <button onclick="show('cnae')">CNAE</button>
+    <button onclick="show('socios')">Sócios</button>
+    <button onclick="show('sobre')">Resumo</button>
+  </nav>
+
+  <section id="info">
+    <div class="field"><label>CNPJ:</label>04.044.900/0001‑91</div>
+    <div class="field"><label>Razão Social:</label>Instituto Guidolin de Odontologia LTDA</div>
+    <div class="field"><label>Nome Fantasia:</label>Instituto Guidolin</div>
+    <div class="field"><label>Data de Abertura:</label>18/09/2000</div>
+    <div class="field"><label>Porte:</label>Micro Empresa</div>
+    <div class="field"><label>Natureza Jurídica:</label>Sociedade Empresária Limitada</div>
+    <div class="field"><label>Capital Social:</label>R$ 96.000,00</div>
+    <div class="field"><label>Situação:</label>Ativa (desde 03/11/2005)</div>
+    <div class="field"><label>Optante Simples:</label>Não (excluído em 01/01/2018)</div>
+  </section>
+
+  <section id="contato">
+    <div class="field"><label>Telefone:</label>(61) 3328‑8707</div>
+    <div class="field"><label>E‑mail:</label>institutoguidolin@gmail.com</div>
+  </section>
+
+  <section id="endereco">
+    <div class="field"><label>Endereço:</label>Setor SRTVN Quadra 701 Conjunto C, 124, Sala 123 Ala B</div>
+    <div class="field"><label>Bairro:</label>Asa Norte</div>
+    <div class="field"><label>Cidade/UF:</label>Brasília/DF</div>
+    <div class="field"><label>CEP:</label>70719‑903</div>
+  </section>
+
+  <section id="cnae">
+    <div class="field"><label>CNAE Principal:</label>86.30‑5‑04 – Atividade odontológica</div>
+    <p>Consultas e tratamentos odontológicos em clínicas, consultórios, hospitais, empresas e unidades móveis :contentReference[oaicite:1]{index=1}</p>
+  </section>
+
+  <section id="socios">
+    <div class="field"><label>Sócio‑Administrador:</label>Silvio Carlos Guidolin Monteiro (desde 18/09/2000)</div>
+  </section>
+
+  <section id="sobre">
+    <p>O Instituto Guidolin de Odontologia LTDA foi fundado em 18 de setembro de 2000, é uma microempresa de natureza limitada, com capital de R$ 96 000,00. Está ativa desde 3 de novembro de 2005 e não é optante do Simples Nacional desde 1º de janeiro de 2018. Atende odontologia geral em Brasília‑DF. Sócio‑administrador: Silvio Carlos Guidolin Monteiro.</p>
+  </section>
+
+  <script>
+    function show(id) {
+      document.querySelectorAll('section').forEach(s =>
+        s.classList.toggle('active', s.id === id)
+      );
+    }
+    show('info');
+  </script>
+</body>
+</html>
